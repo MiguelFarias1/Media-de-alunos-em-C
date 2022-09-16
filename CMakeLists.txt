@@ -3,4 +3,4 @@ project(Media C)
 
 set(CMAKE_C_STANDARD 23)
 
-add_executable(Media main.c)
+add_executable(Media main.c Biblioteca.h)
