@@ -14,7 +14,10 @@
 86	194	6850367227388149	Media.exe	9375ea9ccac7c421
 2	86	6850368866862942	CMakeFiles/Media.dir/main.c.obj	550c8c4f1041acee
 86	190	6850368867864845	Media.exe	9375ea9ccac7c421
+<<<<<<< HEAD
 3	102	6850745031970112	CMakeFiles/Media.dir/main.c.obj	550c8c4f1041acee
 103	206	6850745032971546	Media.exe	9375ea9ccac7c421
 3	84	6850747238600240	CMakeFiles/Media.dir/main.c.obj	550c8c4f1041acee
 85	173	6850747239466624	Media.exe	9375ea9ccac7c421
+=======
+>>>>>>> origin/main

@@ -13,8 +13,11 @@ struct Aluno
 };
 typedef struct Aluno Aluno;
 
+<<<<<<< HEAD
 void VerificaNota(Aluno *aluno,int quantidade);
 
+=======
+>>>>>>> origin/main
 void Preenche(Aluno *aluno, int quantidade)
 {
     setlocale(LC_ALL,"portuguese");
@@ -36,19 +39,26 @@ void Preenche(Aluno *aluno, int quantidade)
         printf("Digite a nota 1 do nota do aluno: %s!\n", aluno[i].nome);
         scanf("%f", &aluno[i].nota1);
 
+<<<<<<< HEAD
         VerificaNota(&aluno[i],i);
 
+=======
+>>>>>>> origin/main
         fflush(stdin);
 
         printf("Digite a nota 2 do nota do aluno: %s !\n", aluno[i].nome);
         scanf("%f", &aluno[i].nota2);
 
+<<<<<<< HEAD
         VerificaNota(&aluno[i],i);
 
+=======
+>>>>>>> origin/main
         fflush(stdin);
 
         printf("Digite a nota 3 do nota do aluno: %s !\n", aluno[i].nome);
         scanf("%f", &aluno[i].nota3);
+<<<<<<< HEAD
 
         VerificaNota(&aluno[i],i);
     }
@@ -87,6 +97,11 @@ void VerificaNota(Aluno *aluno, int i)
             }
 }
 
+=======
+    }
+}
+
+>>>>>>> origin/main
 float CalculaMedia(Aluno * aluno, int i)
 {
     float soma = aluno[i].nota1 + aluno[i].nota2 + aluno[i].nota3;
