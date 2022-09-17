@@ -8,17 +8,15 @@ int main()
 
     int quantidade = 0;
 
-    printf("Digite a quantidade de alunos da turma !\n");
-    scanf("%d",&quantidade);
-
-    while(quantidade <= 0)   // While para garantir que vai ser um número positivo!
+    do
     {
         printf("Digite a quantidade de alunos da turma !\n");
-        scanf("%d",&quantidade);
+        scanf("%d", &quantidade);
 
-        if(quantidade > 0)
-            break;
+        if (quantidade <= 0)
+            printf("\nVocê precisa digitar um número positivo !\n\n");
     }
+    while(quantidade <= 0);   // Do While para garantir que vai ser um número positivo!
 
     Aluno * aluno = (Aluno *) calloc(quantidade, sizeof (Aluno));
 

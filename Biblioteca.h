@@ -13,8 +13,6 @@ struct Aluno
 };
 typedef struct Aluno Aluno;
 
-void VerificaNota(Aluno *aluno);
-
 void CalculaMedia(Aluno *aluno);
 
 void Preenche(Aluno *aluno, int quantidade)
@@ -35,61 +33,48 @@ void Preenche(Aluno *aluno, int quantidade)
 
         fflush(stdin);
 
-        printf("Digite a nota 1 do nota do aluno: %s!\n", aluno[i].nome);
-        scanf("%f", &aluno[i].nota1);
+        do
+        {
+            printf("Digite a nota 1 do nota do aluno: %s!\n", aluno[i].nome);
+            scanf("%f", &aluno[i].nota1);
 
-        VerificaNota(&aluno[i]);
+            if(aluno[i].nota1 > 10 || aluno[i].nota1 < 0)
+            {
+                printf("Você tem que digitar uma nota entre 0 e 10 !\n");
+            }
+        }
+        while (aluno[i].nota1 > 10 || aluno[i].nota1 < 0);
 
         fflush(stdin);
 
-        printf("Digite a nota 2 do nota do aluno: %s !\n", aluno[i].nome);
-        scanf("%f", &aluno[i].nota2);
+        do
+        {
+            printf("Digite a nota 2 do nota do aluno: %s !\n", aluno[i].nome);
+            scanf("%f", &aluno[i].nota2);
 
-        VerificaNota(&aluno[i]);
+            if(aluno[i].nota2 > 10 || aluno[i].nota2 < 0)
+            {
+                printf("Você tem que digitar uma nota entre 0 e 10 !\n");
+            }
+        }
+        while (aluno[i].nota2 > 10 || aluno[i].nota2 < 0);
 
         fflush(stdin);
 
-        printf("Digite a nota 3 do nota do aluno: %s !\n", aluno[i].nome);
-        scanf("%f", &aluno[i].nota3);
+        do
+        {
+            printf("Digite a nota 3 do nota do aluno: %s !\n", aluno[i].nome);
+            scanf("%f", &aluno[i].nota3);
 
-        VerificaNota(&aluno[i]);
+            if(aluno[i].nota3 > 10 || aluno[i].nota3 < 0)
+            {
+                printf("Você tem que digitar uma nota entre 0 e 10 !\n");
+            }
+        }
+        while (aluno[i].nota3 > 10 || aluno[i].nota3 < 0);
 
         CalculaMedia(&aluno[i]);
     }
-}
-
-void VerificaNota(Aluno *aluno)
-{
-        if(aluno->nota1 > 10 || aluno->nota1 < 0)
-        {
-            while (aluno->nota1 > 10 || aluno->nota1 < 0)
-            {
-                printf("Você tem que digitar uma nota entre 0 e 10 !\n");
-                printf("Digite a nota 1 do nota do aluno: %s!\n", aluno->nome);
-
-                fflush(stdin);
-                scanf("%f", &aluno->nota1);
-            }
-        }
-        else if (aluno->nota2 > 10 || aluno->nota2 < 0)
-        {
-            while (aluno->nota2 > 10 || aluno->nota2 < 0)
-            {
-                printf("Você tem que digitar uma nota entre 0 e 10 !\n");
-                printf("Digite a nota 2 do nota do aluno: %s!\n", aluno->nome);
-                scanf("%f", &aluno->nota2);
-            }
-
-        }
-        else if (aluno->nota3 > 10 || aluno->nota3 < 0)
-        {
-            while (aluno->nota3 > 10 || aluno->nota3 < 0)
-            {
-                printf("Você tem que digitar uma nota entre 0 e 10 !\n");
-                printf("Digite a nota 3 do nota do aluno: %s!\n", aluno->nome);
-                scanf("%f", &aluno->nota3);
-            }
-        }
 }
 
 void CalculaMedia(Aluno *aluno)
